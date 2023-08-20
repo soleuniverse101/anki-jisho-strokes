@@ -13,9 +13,9 @@ SVG_DIR = path.join(CURRENT_DIR, "kanji_svg")
 with open(path.join(CURRENT_DIR, "kanji_list.txt"), "r") as file:
     KANJI_LIST = file.read()
 
-mw.addonManager.setWebExports(__name__, r"resources/web/.*(css|js)")
+mw.addonManager.setWebExports(__name__, r"web/.*(css|js)")
 addon_package = mw.addonManager.addonFromModule(__name__)
-DIAGRAM_STYLE_PATH = f"/_addons/{addon_package}/resources/web/diagram.css"
+DIAGRAM_STYLE_PATH = f"/_addons/{addon_package}/web/diagram.css"
 
 
 def is_kanji(c: str) -> bool:
