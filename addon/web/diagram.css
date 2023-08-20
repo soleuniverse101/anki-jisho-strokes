@@ -1,0 +1,65 @@
+[data-color-theme*="d"] .stroke_order_diagram--bounding_box,
+[data-color-theme*="a"] .stroke_order_diagram--bounding_box {
+  stroke: #444;
+}
+
+.stroke_order_diagram--bounding_box {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: square;
+}
+
+[data-color-theme*="d"] .stroke_order_diagram--guide_line,
+[data-color-theme*="a"] .stroke_order_diagram--guide_line {
+  stroke: #444;
+}
+
+.stroke_order_diagram--guide_line {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: square;
+  stroke-dasharray: 5, 5;
+}
+
+[data-color-theme*="d"] .stroke_order_diagram--current_path {
+  stroke: #eee;
+}
+
+[data-color-theme*="a"] .stroke_order_diagram--current_path {
+  stroke: #eee;
+}
+
+.stroke_order_diagram--current_path {
+  fill: none;
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+[data-color-theme*="d"] .stroke_order_diagram--path_start,
+[data-color-theme*="a"] .stroke_order_diagram--path_start {
+  fill: rgba(255, 0, 0, 0.7);
+}
+
+.stroke_order_diagram--path_start {
+  fill: rgba(255, 0, 0, 0.7);
+  stroke: none;
+}
+
+[data-color-theme*="d"] .stroke_order_diagram--existing_path,
+[data-color-theme*="a"] .stroke_order_diagram--existing_path {
+  stroke: #999;
+}
+
+.stroke_order_diagram--existing_path {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
