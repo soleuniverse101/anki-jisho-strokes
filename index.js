@@ -6,8 +6,9 @@ import { optimize } from "svgo";
 const RAW_FOLDER = "kanji_svg/raw/";
 const PROCESSED_FOLDER = "kanji_svg/processed/";
 
-const joyoList = readFileSync("addon/kanji_list.txt").toString();
-const files = readdirSync(RAW_FOLDER).filter(value => /^[0-9a-z]{5}\.svg$/.test(value)).filter(value => joyoList.includes(String.fromCharCode(parseInt(value, 16))));
+// We use every kanji considered "simple" that isn't a variant (such as Kaisho or Hyougai)
+// const joyoList = readFileSync("addon/kanji_list.txt").toString();
+const files = readdirSync(RAW_FOLDER).filter(value => /^[0-9a-z]{5}\.svg$/.test(value)) // .filter(value => joyoList.includes(String.fromCharCode(parseInt(value, 16))));
 
 const baseHTMLFile = "resources/svg-process.html";
 
