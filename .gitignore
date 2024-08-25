@@ -1,3 +1,7 @@
 node_modules/
 kanji_svg/
 releases/
+.idea/
+
+resources/kanji
+addon/processed_kanji
