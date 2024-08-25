@@ -3,8 +3,9 @@ import { JSDOM } from "jsdom";
 import { join } from "path";
 import { optimize } from "svgo";
 
-const RAW_FOLDER = "kanji_svg/raw/";
-const PROCESSED_FOLDER = "kanji_svg/processed/";
+const RAW_FOLDER = "resources/kanji";
+const PROCESSED_FOLDER = "addon/processed_kanji";
+// const KANJI_LIST = "addon/kanji_list";
 
 // We use every kanji considered "simple" that isn't a variant (such as Kaisho or Hyougai)
 // const joyoList = readFileSync("addon/kanji_list.txt").toString();

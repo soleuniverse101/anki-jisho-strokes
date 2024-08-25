@@ -2,9 +2,9 @@
   "name": "anki_jisho_strokes",
   "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "process-svg.js",
   "scripts": {
-    "generate": "node index.js",
+    "process-svg": "node process-svg.js",
     "bundle": "node bundle.js"
   },
   "keywords": [],
