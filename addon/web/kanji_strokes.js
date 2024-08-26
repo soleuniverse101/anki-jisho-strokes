@@ -9,19 +9,22 @@ function addStrokes() {
       if (characters.length === 0) return;
 
       const regex = new RegExp(`(${characters.join("|")})`, "g");
-
       document.body.innerHTML = document.body.innerHTML.replace(
         regex,
         `<span class="strokes-character">$1</span>`
       );
+
       for (const elem of document.getElementsByClassName("strokes-character")) {
         const char = elem.innerHTML;
-        const div = document.createElement("div");
-        div.classList.add("strokes-container");
-        div.innerHTML = strokes[char];
-        elem.append(div);
-      }
 
+        let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        elem.append(svg);
+        svg.outerHTML = strokes[char];
+        svg = elem.children[0];
+
+        svg.classList.add("strokes-order");
+        svg.style.height = null;
+      }
     });
   });
 }
