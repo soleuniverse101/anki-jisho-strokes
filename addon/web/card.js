@@ -1,10 +1,6 @@
-const showAnswer = _showAnswer;
+const modifiedShowAnswer = _showAnswer;
 
 _showAnswer = (a, bodyclass) => {
-    console.log({a, bodyclass});
-
-    console.log(addStrokes);
-    addStrokes();
-
-    showAnswer(a, bodyclass);
+    modifiedShowAnswer(a, bodyclass);
+    _queueAction(addStrokes)
 };
