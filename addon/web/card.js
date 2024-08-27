@@ -1,6 +1,5 @@
-const modifiedShowAnswer = _showAnswer;
+const originalShowAnswer = _showAnswer;
 
 _showAnswer = (a, bodyclass) => {
-    modifiedShowAnswer(a, bodyclass);
-    _queueAction(addStrokes)
+    _queueAction(() => addStrokes(a, (result) => originalShowAnswer(result, bodyclass)))
 };
