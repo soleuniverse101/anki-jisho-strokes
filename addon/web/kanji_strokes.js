@@ -13,7 +13,10 @@ function addStrokes(html, callback) {
 
     pycmd("strokes_query:" + _document.body.innerText, strokes => {
       const characters = Object.keys(strokes);
-      if (characters.length === 0) return;
+      if (characters.length === 0) {
+        callback(html);
+        return;
+      }
 
       const regex = new RegExp(`(${characters.join("|")})`, "g");
       _document.body.innerHTML = _document.body.innerHTML.replace(
