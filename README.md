@@ -17,7 +17,7 @@ The **configuration file** follows the following schema :
 }
 ```
 
-Where `note_types` is a list of names of note types whose cards will get indicate the kanji's strokes order.
+Where `note_types` is a list of names of note types whose cards will have their kanji's strokes order shown.
 
 **Notes:**
 
