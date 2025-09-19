@@ -4,12 +4,13 @@ function addStrokes(html, callback) {
   // Test if we should generate strokes order, so we don't send the whole HTML for nothing
   pycmd("strokes_test", kanji_card => {
     if (!kanji_card) {
-      callback(html)
+      callback(html);
       return;
     }
 
+    // To prevent replacing non displayed characters (in HTML head)
     const _document = STROKES_PARSER.parseFromString(html, "text/html");
-    
+
     pycmd("strokes_query:" + _document.body.innerText, strokes => {
       const characters = Object.keys(strokes);
       if (characters.length === 0) return;
@@ -32,7 +33,7 @@ function addStrokes(html, callback) {
         svg.style.height = null;
       }
 
-      callback(_document.getElementsByTagName("html").item(0).outerHTML)
+      callback(_document.getElementsByTagName("html").item(0).outerHTML);
     });
   });
 }

@@ -31,7 +31,7 @@ def is_kanji(c: str) -> bool:
     return c in KANJI_LIST
 
 
-def get_strokes(text):
+def get_strokes(text: str):
     strokes = {}
     for c in text:
         if (c in strokes) or (not is_kanji(c)):
