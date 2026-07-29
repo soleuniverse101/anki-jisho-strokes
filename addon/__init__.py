@@ -82,7 +82,7 @@ def is_kanji_display_context(context: Any) -> bool:
 
 def is_valid_notetype(notetype: str) -> bool:
     for n in config_note_types:
-        if fnmatch(notetype, n):
+        if fnmatch(notetype.lower(), n.lower()):
             return True
     return False
 
